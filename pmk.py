@@ -2,7 +2,7 @@ import paramiko as pmk
 import re
 ssh = pmk.SSHClient()
 ssh.set_missing_host_key_policy(pmk.AutoAddPolicy())
-ssh.connect("192.168.5.64",username="",password="")
+ssh.connect("http://15.206.185.149:8000/",username="",password="")
 ssh.exec_command("mkdir mydear")
 sftp = ssh.open_sftp()
 sftp.put("local.py","./mydear/local.py")
